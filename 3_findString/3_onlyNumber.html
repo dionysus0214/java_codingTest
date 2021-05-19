@@ -6,14 +6,24 @@
     <body>
         <script>
             function solution(str) {
-                let answer="";
+                let answer = "";
                 for(let x of str) {
-                  if(!isNaN(x)) {
+                  if(!isNaN(x)) { // 매개변수가 숫자인지 검사(숫자가 아니면 true)
                     answer += x;
                   }
                 }  
-                return parseInt(answer);
+                return parseInt(answer); // string으로 나열 후 숫자로 변환
             }
+
+            // function solution(str) {
+            //     let answer = "";
+            //     for(let x of str) {
+            //       if(!isNaN(x)) { 
+            //         answer = answer*10 + Number(x);
+            //       }
+            //     }  
+            //     return answer;
+            // }
             
             let str="g0en2T0s8eSoft";
             console.log(solution(str));
