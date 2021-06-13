@@ -1,22 +1,22 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>출력결과</title>
-    </head>
-    <body>
-        <script>
-            function solution(arr) {
-                let answer, min=Number.MAX_SAFE_INTEGER;
-                for(let i = 1; i < arr.length; i++) {
-                  if(arr[i] < min) {
-                    min = arr[i];
-                  }
-                }
-                return answer=min;
-            }
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+<body>
+  <script>
+    function solution(arr) {
+      let answer, min = Number.MAX_SAFE_INTEGER;
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+          min = arr[i];
+        }
+      }
+      return answer = min;
+    }
 
-            let arr = [5, 7, 14, 3, 10, 12, 8];
-            console.log(solution(arr));
-        </script>
-    </body>
+    let arr = [5, 7, 14, 3, 10, 12, 8];
+    console.log(solution(arr));
+  </script>
+</body>
 </html>
