@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(str1, str2) {
+      let answer = "Yes";
+      let shA = new Map();
+      let shB = new Map();
+      for (let x of str1) {
+        if (shA.has(x)) shA.set(x, shA.get(x) + 1);
+        else shA.set(x, 1);
+      }
+      for (let x of str2) {
+        if (shB.has(x)) shB.set(x, shB.get(x) + 1);
+        else shB.set(x, 1);
+      }
+      for (let i = 0; i < str1.length; i++) {
+        if (shA.get(str1[i]) !== shB.get(str1[i])) answer = "NO";
+      }
+      return answer;
+    }
+
+    let a = "AbaAeCe";
+    let b = "baeeACA";
+    // let a = "abaCC";
+    // let b = "Caaab";
+    console.log(solution(a, b));
+  </script>
+</body>
+
+</html>
